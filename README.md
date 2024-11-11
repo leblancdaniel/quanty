@@ -5,7 +5,7 @@ If you find this helpful, any contribution would be encouraging :) https://buyme
 
 
 # TODO:
-- pull market data from Alpha Vantage and store it
+- pull market data from somewhere (Polygon Flat files (https://polygon.io/dashboard), Financial Modeling Prep API (https://site.financialmodelingprep.com/developer/docs/batch-eod-prices)) and store it
 - process data in batches or in streams (or both) and store pre-processed data
 - configure and setup services (Docker, Kubernetes, ECR, )
 - Define and codify criteria for over-reactions.  Provide list of candidate stocks.
