@@ -5,7 +5,7 @@ If you find this helpful, any contribution would be encouraging :) https://buyme
 
 
 # TODO:
-- pull market data from somewhere and store it
+- pull market data from Alpha Vantage and store it
 - process data in batches or in streams (or both) and store pre-processed data
 - configure and setup services (Docker, Kubernetes, ECR, )
 - Define and codify criteria for over-reactions.  Provide list of candidate stocks.
@@ -18,7 +18,7 @@ If you find this helpful, any contribution would be encouraging :) https://buyme
 - Highly consistent: data must be accurate.  Downtime means no trades, but uptime with incorrect data means risk of losses
 
 ## Data
-- Stock data streams
+- Stock data streams (Alpha Vantage API)
 - Fetch company financials, qualitative info
 - ID companies with higher probability of unjustified losses or gains given systematic & idiosyncratic information
 
