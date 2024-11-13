@@ -1,26 +1,23 @@
 # quanty
-a little quantitative finance application.  Detect potential market over-reactions.
+A little quantitative finance application.  Detect potential market over-reactions.  The goal is to identify companies with a higher probability of unjustified losses (eventually also unjustified gains) given systematic & idiosyncratic information
 
-If you find this helpful, any contribution would be encouraging :) https://buymeacoffee.com/dleblanc
+If you find this helpful, consider buying me a coffee! :) https://buymeacoffee.com/dleblanc
 
 
 # TODO:
-- pull market data from somewhere (Polygon Flat files (https://polygon.io/dashboard), Financial Modeling Prep API (https://site.financialmodelingprep.com/developer/docs/batch-eod-prices)) and store it
-- process data in batches or in streams (or both) and store pre-processed data
-- configure and setup services (Docker, Kubernetes, ECR, )
+- pull sample polygon data and use it for testing locally
+- pull market data from Polygon.io Flat files (https://polygon.io/dashboard) and store it
+- process data in batches, streams, or both, and store pre-processed data somewhere
+- configure and setup services (Database, Docker, Kubernetes, ECR, )
 - Define and codify criteria for over-reactions.  Provide list of candidate stocks.
-- Log predictions and evaluate them across different time horizons (intraday, daily, weekly, monthly).  Track other metrics (alpha, sharpe ratio, etc.)
+- Log predictions and evaluate them across different time horizons (daily, weekly, monthly).  Track other metrics (alpha, sharpe ratio, etc.)
 - Pull financials, earnings reports & questions, and competitor analysis.  Infer on them using combination of foundational models and heuristics.
-
-## Non-functional Requirements
-- low-latency: must be fast, constantly streaming (build tests and simulations)
-- scalable: need to process an entire market data (maybe start with a certain sub-set first)
-- Highly consistent: data must be accurate.  Downtime means no trades, but uptime with incorrect data means risk of losses
+- Try intra-day once ready
 
 ## Data
-- Stock data streams (Alpha Vantage API)
+- Daily stock data (polygon.io)
 - Fetch company financials, qualitative info
-- ID companies with higher probability of unjustified losses or gains given systematic & idiosyncratic information
+
 
 ## Pipeline
 - ingest large dataset (polars, numpy)
