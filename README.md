@@ -5,9 +5,8 @@ If you find this helpful, consider buying me a coffee! :) https://buymeacoffee.c
 
 
 # TODO:
-- pull sample polygon data and use it for testing locally
+- process daily prices in batches, store data somewhere 
 - pull market data from Polygon.io Flat files (https://polygon.io/dashboard) and store it
-- process data in batches, streams, or both, and store pre-processed data somewhere
 - configure and setup services (Database, Docker, Kubernetes, ECR, )
 - Define and codify criteria for over-reactions.  Provide list of candidate stocks.
 - Log predictions and evaluate them across different time horizons (daily, weekly, monthly).  Track other metrics (alpha, sharpe ratio, etc.)
@@ -18,9 +17,8 @@ If you find this helpful, consider buying me a coffee! :) https://buymeacoffee.c
 - Daily stock data (polygon.io)
 - Fetch company financials, qualitative info
 
-
 ## Pipeline
-- ingest large dataset (polars, numpy)
+- ingest & process large dataset (polars, numpy)
 - Dataset versioning (DVC)
 - train & backtest (Pytorch, JAX)
 - LLMs & Chain of Thought (Claude, LangChain, ReAct)?
