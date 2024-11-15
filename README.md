@@ -5,6 +5,7 @@ If you find this helpful, consider buying me a coffee! :) https://buymeacoffee.c
 
 
 # TODO:
+- setup postgres instance, write scripts to create and destroy it
 - process daily prices in batches, store data somewhere 
 - pull market data from Polygon.io Flat files (https://polygon.io/dashboard) and store it
 - configure and setup services (Database, Docker, Kubernetes, ECR, )
