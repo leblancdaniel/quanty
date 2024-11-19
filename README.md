@@ -1,10 +1,17 @@
 # quanty
 A little quantitative finance application.  Detect potential market over-reactions.  The goal is to identify companies with a higher probability of unjustified losses (eventually also unjustified gains) given systematic & idiosyncratic information
 
-If you find this helpful, consider buying me a coffee! :) https://buymeacoffee.com/dleblanc
+If you find this interesting, consider buying me a coffee! :) https://buymeacoffee.com/dleblanc
 
+
+## Setup
+Install the necessary requirements (python 3.12+, terraform, atlas).  To get the gist, create a polygon.io account and enter your API key in the .env file.  
+- `terraform setup.tf` will create a PostgreSQL database instance in AWS, along with a generated password.  Store this password if you want to access your database later.  It also stores the state of your infrastructure locally in `.tfstate`
+- `Atlas` manages the schema of our database, and works a lot like `terraform`, but for database schemas `#TODO enter instructions to setup database schema`
+- `python import_eod.py` will spend some time inserting EOD data into the database
 
 # TODO:
+- setup postgres instance, write scripts to create and destroy it
 - process daily prices in batches, store data somewhere 
 - pull market data from Polygon.io Flat files (https://polygon.io/dashboard) and store it
 - configure and setup services (Database, Docker, Kubernetes, ECR, )
@@ -29,12 +36,12 @@ If you find this helpful, consider buying me a coffee! :) https://buymeacoffee.c
 ## Infrastructure & DevOps
 - GitHub actions
 - Terraform (Infra as code)
+- Atlas (Schema as Code)
 - AWS for storage, containers (Docker, ECR)
 - Kubernetes (AWS EKS)
 - Batch processing (Spark)
 - Stream processing (Kafka)
 - Structured Data in PostgreS
-- Timeseries data in TS DB
 - Blob storage in S3
 - Cache (Redis)
 - Payments (Stripe, Venmo)
