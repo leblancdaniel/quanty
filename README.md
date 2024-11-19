@@ -6,8 +6,8 @@ If you find this interesting, consider buying me a coffee! :) https://buymeacoff
 
 ## Setup
 Install the necessary requirements (python 3.12+, terraform, atlas).  To get the gist, create a polygon.io account and enter your API key in the .env file.  
-- `terraform setup.tf` will create a PostgreSQL database instance in AWS, along with a generated password.  Store this password if you want to access your database later.  It also stores the state of your infrastructure locally in `.tfstate`
-- `Atlas` manages the schema of our database, and works a lot like `terraform`, but for database schemas `#TODO enter instructions to setup database schema`
+- `terraform setup.tf` will create a PostgreSQL database instance in AWS, along with a generated password.  You'll need to save the password in the `.env` file so you can continue.  It also stores the state of your infrastructure locally in `.tfstate`
+- `Atlas` manages the schema of our database, and works a lot like `terraform`, but for database schemas.  `setup.sh` runs the Atlas script to inspect the schema
 - `python import_eod.py` will spend some time inserting EOD data into the database
 
 # TODO:
