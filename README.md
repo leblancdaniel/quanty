@@ -12,7 +12,7 @@ Install the necessary requirements (python 3.12+, terraform, atlas).  To get the
 
 # TODO:
 - setup postgres instance, write scripts to create and destroy it
-- process daily prices in batches, store data somewhere 
+- process daily prices in batches using fireduck, store data somewhere 
 - pull market data from Polygon.io Flat files (https://polygon.io/dashboard) and store it
 - configure and setup services (Database, Docker, Kubernetes, ECR, )
 - Define and codify criteria for over-reactions.  Provide list of candidate stocks.
@@ -25,7 +25,7 @@ Install the necessary requirements (python 3.12+, terraform, atlas).  To get the
 - Fetch company financials, qualitative info
 
 ## Pipeline
-- ingest & process large dataset (polars, numpy)
+- ingest & process large dataset (fireduck, numpy)
 - Dataset versioning (DVC)
 - train & backtest (Pytorch, JAX)
 - LLMs & Chain of Thought (Claude, LangChain, ReAct)?

@@ -5,7 +5,7 @@ COMMENT ON SCHEMA "public" IS 'standard public schema';
 
 -- Add new table named "stocks_daily"
 CREATE TABLE IF NOT EXISTS "stocks_daily" (
-    id BIGINT PRIMARY KEY,
+    id BIGINT NOT NULL GENERATED ALWAYS AS IDENTITY,
     ticker TEXT NOT NULL,
     volume BIGINT,
     open FLOAT,
