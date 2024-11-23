@@ -72,5 +72,9 @@ while d <= end_date:
             print(f"Inserted {rec}")
     d += dt.timedelta(days=1)
     time.sleep(12.5)  # polygon.io free tier limits 5 API calls/min
+
+print(f"Finished importing stock data for {ticker}!")
+cur.execute("SELECT * FROM stocks_daily")
+print(cur.fetchone())
 # close Postgres connection
 conn.close()
